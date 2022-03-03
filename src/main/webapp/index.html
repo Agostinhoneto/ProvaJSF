@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Cadastro de Cliente</title>
+    <base href="/">
+
+    <!-- Bootstrap CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  </head>
+  <body>
+    <app-root></app-root>
+  
+<div class="container mt-3">
+  <div class="row mt-5">
+    <div class="col">
+      <h2>Cadastrar Clientes</h2>
+      
+      <form  name = "form" method ="post" action="http://localhost:8080/prova/welcome">
+        
+        <div class="form-group">
+          <label>Nome</label>
+          <input type="text" class="form-control" id= "nome" name="nome" placeholder="Placeholder campo Nome" >                   
+        </div>
+        
+        
+        <div class="form-group">
+          <label> CPF</label>
+          <input type="text" class="form-control" id = "cpf"  name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite um CPF no formato: xxx.xxx.xxx-xx" placeholder="Digite um CPF no formato: xxx.xxx.xxx-xx" >
+        		<script type="text/javascript">$("#cpf").mask("000.000.000-00");</script>
+        </div>
+		<div class="form-group">
+          <label> Data de Nascimento</label>
+          <input type="date" class="form-control" name="data_nasc" placeholder="Placeholder campo Data" >
+        </div>
+         <div class="form-group">
+          <label> RG</label>
+          <input type="text" class="form-control"   name="rg" placeholder="Digite um RG " >
+         
+        </div>
+         
+        <div class="form-group">
+          <label> Celular</label>        
+			<input  class="form-control"  type="tel" name="telefone" id="telefone"   />
+			<script type="text/javascript">$("#telefone").mask("(00) 00000-0000");</script>
+        </div>
+        <div class="form-group">
+          <label> E-mail</label>
+          <input type="text" class="form-control" name="email" placeholder="Placeholder campo  E-mail" >
+        </div>
+         <div class="form-group">
+          <label> Nome da mãe</label>
+          <input type="text" class="form-control" name="nome_mae" placeholder="Placeholder campo  Nome da mãe"  >
+        </div>
+         <div class="form-group">
+          <label> Nome do pai</label>
+          <input type="text" class="form-control" name="nome_pai" placeholder="Placeholder campo  Nome do pai" >
+        </div>
+        <button type="submit" class="btn btn-primary" value="Save" action="#{cliente.save()}"> Salvar</button>
+        <button type="submit" class="btn btn-default ml-2">Cancelar</button>
+      </form>
+    </div>
+  </div>
+</div>
+	
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
